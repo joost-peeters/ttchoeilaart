@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Player 1",
+        "ranking": 10,
+        "points": 100
+    },
+    {
+        "name": "Player 2",
+        "ranking": 5,
+        "points": 50
+    },
+    {
+        "name": "Player 3",
+        "ranking": 15,
+        "points": 150
+    },
+    {
+        "name": "Walk-Over",
+        "ranking": 1,
+        "points": 0
+    }
+]
