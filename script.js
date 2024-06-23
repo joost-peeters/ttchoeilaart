@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
     const teamSelects = {
         teamA: ["teamAPlayer1", "teamAPlayer2", "teamAPlayer3"],
         teamB: ["teamBPlayer1", "teamBPlayer2", "teamBPlayer3"],
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const selected = select.value;
                 if (selected) {
                     const player = players.find(p => p.name === selected);
-                    teamSum += player.ranking;
+                    teamSum += player.points;  // Use points instead of ranking
                     selectedCount++;
                     if (selectedPlayers.has(selected)) {
                         selectedPlayers.set(selected, selectedPlayers.get(selected) + 1);
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Populate competition week dropdown
     const competitionWeekSelect = document.getElementById("competitionWeek");
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 1; i <= 20; {
         const option = document.createElement("option");
         option.value = `week${i}`;
         option.textContent = `Week ${i}`;
