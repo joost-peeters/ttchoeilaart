@@ -1,10 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Initialize players with an additional "Walk-Over" player
-    const players = [{ name: 'Walk-Over', ranking: 1 }, ...Array.from({ length: 30 }, (_, i) => ({
-        name: `Player ${i + 1}`,
-        ranking: Math.floor(Math.random() * 16) + 1
-    }))];
-
     const teamSelects = {
         teamA: ["teamAPlayer1", "teamAPlayer2", "teamAPlayer3"],
         teamB: ["teamBPlayer1", "teamBPlayer2", "teamBPlayer3"],
@@ -25,7 +19,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const warningMessagesDiv = document.querySelector(".warnings");
 
-    function populateDropdowns() {
+    function fetchPlayers() {
+        return fetch('players.json')
+            .then(response => response.json())
+            .then(data => {
+                // Add the "Walk-Over" player if not present
+                if (!data.some(player => player.name === "Walk-Over")) {
+                    data.push({ name: "Walk-Over", ranking: 1, points: 0 });
+                }
+                return data;
+            });
+    }
+
+    function populateDropdowns(players) {
         Object.values(teamSelects).flat().forEach(id => {
             const select = document.getElementById(id);
             // Add a blank option as the first option
@@ -43,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    function updateWarnings() {
+    function updateWarnings(players) {
         const selectedPlayers = new Map();
 
         // Clear all existing warnings
@@ -116,9 +122,11 @@ document.addEventListener("DOMContentLoaded", function() {
         competitionWeekSelect.appendChild(option);
     }
 
-    populateDropdowns();
-    Object.values(teamSelects).flat().forEach(id => {
-        document.getElementById(id).addEventListener("change", updateWarnings);
+    fetchPlayers().then(players => {
+        populateDropdowns(players);
+        Object.values(teamSelects).flat().forEach(id => {
+            document.getElementById(id).addEventListener("change", () => updateWarnings(players));
+        });
+        updateWarnings(players);
     });
-    updateWarnings();
 });
