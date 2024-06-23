@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.week-selection {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.week-selection select {
+    width: 200px;
+}
+
+.teams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.team {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+}
+
+select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    background-color: orange;
+}
+
+.warnings {
+    font-size: 0.9em;
+    color: orange;
+}
