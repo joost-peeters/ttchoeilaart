@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTC Hoeilaart Team Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>TTC Hoeilaart Team Selection</h1>
+    <div class="week-selection">
+        <label for="competitionWeek">Select Competition Week:</label>
+        <select id="competitionWeek">
+            <option value="" selected disabled>Select Week</option>
+        </select>
+    </div>
+    <div class="teams">
+        <div class="team" id="teamA">
+            <h3>Division: Ere</h3>
+            <h2>TTC Hoeilaart A</h2>
+            <select id="teamAPlayer1"></select>
+            <select id="teamAPlayer2"></select>
+            <select id="teamAPlayer3"></select>
+            <p>Total Ranking: <span id="teamASum">0</span></p>
+            <p>Min: 30, Max: 57</p>
+        </div>
+        <div class="team" id="teamB">
+            <h3>Division: Ere</h3>
+            <h2>TTC Hoeilaart B</h2>
+            <select id="teamBPlayer1"></select>
+            <select id="teamBPlayer2"></select>
+            <select id="teamBPlayer3"></select>
+            <p>Total Ranking: <span id="teamBSum">0</span></p>
+            <p>Min: 30, Max: 57</p>
+        </div>
+        <div class="team" id="teamC">
+            <h3>Division: 1e</h3>
+            <h2>TTC Hoeilaart C</h2>
+            <select id="teamCPlayer1"></select>
+            <select id="teamCPlayer2"></select>
+            <select id="teamCPlayer3"></select>
+            <p>Total Ranking: <span id="teamCSum">0</span></p>
+            <p>Min: 18, Max: 33</p>
+        </div>
+        <div class="team" id="teamD">
+            <h3>Division: 2e</h3>
+            <h2>TTC Hoeilaart D</h2>
+            <select id="teamDPlayer1"></select>
+            <select id="teamDPlayer2"></select>
+            <select id="teamDPlayer3"></select>
+            <p>Total Ranking: <span id="teamDSum">0</span></p>
+            <p>Min: 12, Max: 18</p>
+        </div>
+        <div class="team" id="teamE">
+            <h3>Division: 3e</h3>
+            <h2>TTC Hoeilaart E</h2>
+            <select id="teamEPlayer1"></select>
+            <select id="teamEPlayer2"></select>
+            <select id="teamEPlayer3"></select>
+            <p>Total Ranking: <span id="teamESum">0</span></p>
+            <p>Min: 6, Max: 12</p>
+        </div>
+        <div class="team" id="teamF">
+            <h3>Division: 4e</h3>
+            <h2>TTC Hoeilaart F</h2>
+            <select id="teamFPlayer1"></select>
+            <select id="teamFPlayer2"></select>
+            <select id="teamFPlayer3"></select>
+            <p>Total Ranking: <span id="teamFSum">0</span></p>
+            <p>Min: 3, Max: 6</p>
+        </div>
+    </div>
+    <hr>
+    <div class="warnings">
+        <h2>Warning Messages</h2>
+        <hr>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
