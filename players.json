@@ -1,18 +1,38 @@
 [
     {
-        "name": "Player 1",
-        "ranking": 10,
-        "points": 100
+        "name": "Luiz Felipe Alves Da Silva",
+        "ranking": "B0",
+        "points": 18
     },
     {
-        "name": "Player 2",
-        "ranking": 5,
-        "points": 50
+        "name": "Anthony Matagne",
+        "ranking": "B6",
+        "points": 15
     },
     {
-        "name": "Player 3",
-        "ranking": 15,
-        "points": 150
+        "name": "Stijn Kumps",
+        "ranking": "C0",
+        "points": 14
+    },
+        {
+        "name": "Yoran Brondsema",
+        "ranking": "C2",
+        "points": 13
+    },
+        {
+        "name": "Peter Gulya's",
+        "ranking": "C2",
+        "points": 13
+    },
+        {
+        "name": "Joost Peeters",
+        "ranking": "C2",
+        "points": 13
+    },
+        {
+        "name": "Serge Close",
+        "ranking": "C6",
+        "points": 11
     },
     {
         "name": "Walk-Over",
