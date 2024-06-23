@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
             players.forEach(player => {
                 const option = document.createElement("option");
                 option.value = player.name;
-                option.textContent = `${player.name} (Ranking: ${player.ranking})`;
+                option.textContent = `${player.name} - ${player.ranking} (${player.points})`;
                 select.appendChild(option);
             });
         });
